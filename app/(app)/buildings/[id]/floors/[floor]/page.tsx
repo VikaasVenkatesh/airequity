@@ -3,7 +3,6 @@ import Link from "next/link"
 import { BUILDINGS, SEED_COMPLAINTS, SEED_DIAGNOSES } from "@/lib/mock-data"
 import { FloorPlanCanvas } from "@/components/floor-plan/floor-plan-canvas"
 import { FloorPlan3DLoader } from "@/components/floor-plan/floor-plan-3d-loader"
-import { DiagnoseButton } from "@/components/diagnosis/diagnose-button"
 import { AuroraBg } from "@/components/shell/aurora-bg"
 import { ChevronRight, AlertTriangle, Brain, Share2, Box } from "lucide-react"
 
@@ -59,7 +58,6 @@ export default async function FloorPage({
                 <span className="text-amber-300">{openComplaints.length} open complaints</span>
               </div>
             </div>
-            <DiagnoseButton buildingId={id} floorId={floor.id} openCount={openComplaints.length} />
           </div>
 
           {/* Tabs */}
